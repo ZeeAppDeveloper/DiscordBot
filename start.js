@@ -30,14 +30,4 @@ simpleBot.on('close', (code) => {
             shell: true
         });
     }
-});
-
-commandBot.on('close', (code) => {
-    if (code !== 0) {
-        console.log(`Komut Bot kapandı. Yeniden başlatılıyor...`);
-        spawn('node', ['commandBot.js'], {
-            stdio: 'inherit',
-            shell: true
-        });
-    }
 }); 
